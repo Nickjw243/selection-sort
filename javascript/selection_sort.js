@@ -1,5 +1,15 @@
 function selectionSort(arr) {
   // type your code here
+  const sorted = []
+
+  while (arr.length > 0) {
+    const min = Math.min(...arr)
+    const index = arr.indexOf(min)
+
+    sorted.push(min)
+    arr.splice(index, 1)
+  }
+  return sorted
 }
 
 if (require.main === module) {
